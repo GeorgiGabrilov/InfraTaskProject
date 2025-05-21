@@ -35,12 +35,6 @@ This Python service periodically checks two external URLs for availability and r
    cd "folder path where you want the repo to be downloaded"
    git clone https://github.com/GeorgiGabrilov/InfraTaskProject.git
   ```
-
-## Build and Push Docker Image
-
- - docker build -t your-dockerhub-username/url-metrics-app:latest .
- - docker login
- - docker push your-dockerhub-username/url-metrics-app:latest
  
 ## Deploy to Kubernetes with Helm
  
