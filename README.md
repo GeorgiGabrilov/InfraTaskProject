@@ -1,0 +1,49 @@
+# URL Metrics Service
+
+This Python service periodically checks two external URLs for availability and response time, exposing these metrics in Prometheus format via a simple HTTP server.
+
+---
+
+## Features
+
+- Checks URLs `https://httpstat.us/503` and `https://httpstat.us/200`
+- Reports:
+  - URL up status (`1` for up, `0` for down)
+  - Response time in milliseconds
+- Exposes metrics at `/metrics` endpoint in Prometheus format
+- Dockerized for easy deployment
+- Helm chart included for Kubernetes deployment
+
+---
+
+## Prerequisites
+
+- Docker
+- Kubernetes cluster (Docker Desktop with Kubernetes enabled works)
+- Helm 3
+- Python 3.13 (for local runs)
+
+---
+
+# Install dependencies
+
+ pip install -r requirements.txt
+ python app.py
+ Access metrics at: http://localhost:8000/metrics
+ ---
+# Build and Push Docker Image
+
+ docker build -t your-dockerhub-username/url-metrics-app:latest .
+ docker login
+ docker push your-dockerhub-username/url-metrics-app:latest
+ ---
+# Deploy to Kubernetes with Helm
+ 
+helm install url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml
+ or to upgrade
+helm upgrade url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml
+
+ Open http://localhost:30080/metrics in your browser.
+ ---
+# Remove helm
+ helm uninstall url-metrics-app

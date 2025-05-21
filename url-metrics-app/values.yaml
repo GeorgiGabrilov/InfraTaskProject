@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: georgigabrilov/url-metrics-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort        # Exposes the app externally via a port on the node
+  port: 8000            # Internal container port
+  nodePort: 30080        # External NodePort (accessible via localhost:30080)
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
