@@ -30,7 +30,13 @@ This Python service periodically checks two external URLs for availability and r
   - pip install -r requirements.txt
   - python app.py
   - Access metrics at: http://localhost:8000/metrics
- 
+
+## Clone the repo
+
+ - cd "folder path where you want the repo to be downloaded"
+   git clone https://github.com/GeorgiGabrilov/InfraTaskProject.git
+
+
 ## Build and Push Docker Image
 
  - docker build -t your-dockerhub-username/url-metrics-app:latest .
