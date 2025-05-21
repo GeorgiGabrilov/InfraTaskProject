@@ -27,7 +27,7 @@ This Python service periodically checks two external URLs for availability and r
 
 ## Install dependencies
 
-  - pip install -r requirements.txt
+  - pip install -r requirements.txt in vscode terminal or similar IDE
 
 ## Clone the repo
 
@@ -36,12 +36,12 @@ This Python service periodically checks two external URLs for availability and r
    git clone https://github.com/GeorgiGabrilov/InfraTaskProject.git
   ```
  
-## Deploy to Kubernetes with Helm
+## Deploy to Kubernetes with Helm 
  
- - helm install url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml
+ - helm install url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml in vscode terminal
  
 
   Open http://localhost:30080/metrics in your browser.
  
 ## Remove helm
- helm uninstall url-metrics-app
+ helm uninstall url-metrics-app in vscode terminal
