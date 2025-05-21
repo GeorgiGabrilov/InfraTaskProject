@@ -37,11 +37,13 @@ This Python service periodically checks two external URLs for availability and r
   ```
  
 ## Deploy to Kubernetes with Helm 
- 
- - helm install url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml in vscode terminal
+
+  ``` 
+   navigate to the folder where zip file was extracted and open a terminal and paste the helm install command
+   "helm install url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml"
  
 
-  Open http://localhost:30080/metrics in your browser.
+  Open http://localhost:30080/metrics in your browser to check the metrics
  
-## Remove helm
- helm uninstall url-metrics-app in vscode terminal
+  Remove helm with this command in vscode terminal
+  "helm uninstall url-metrics-app" 
