@@ -27,21 +27,21 @@ This Python service periodically checks two external URLs for availability and r
 
 ## Install dependencies
 
-  pip install -r requirements.txt
-  python app.py
-  Access metrics at: http://localhost:8000/metrics
+  - pip install -r requirements.txt
+  - python app.py
+  - Access metrics at: http://localhost:8000/metrics
  
 ## Build and Push Docker Image
 
- docker build -t your-dockerhub-username/url-metrics-app:latest .
- docker login
- docker push your-dockerhub-username/url-metrics-app:latest
+ - docker build -t your-dockerhub-username/url-metrics-app:latest .
+ - docker login
+ - docker push your-dockerhub-username/url-metrics-app:latest
  
 ## Deploy to Kubernetes with Helm
  
- helm install url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml
- or to upgrade
- helm upgrade url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml
+ - helm install url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml
+ - or to upgrade
+ - helm upgrade url-metrics-app ./url-metrics-app -f ./url-metrics-app/values.yaml
 
   Open http://localhost:30080/metrics in your browser.
  
